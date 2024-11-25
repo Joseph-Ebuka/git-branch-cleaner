@@ -17,7 +17,7 @@ To install Git Branch Cleaner, you need to have Node.js and npm installed on you
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/git-branch-cleaner.git
+   git clone https://github.com/Joseph-Ebuka/git-branch-cleaner.git
    cd git-branch-cleaner
    ```
 
@@ -26,10 +26,15 @@ To install Git Branch Cleaner, you need to have Node.js and npm installed on you
    npm install
    ```
 
-3. **Link the CLI Tool**:
+3. **Link the CLI Tool**:  
    ```bash
    npm link
    ```
+##### OR 
+```bash
+npm run build
+npm install -g 
+```
 
 This will make the `git-branch-cleaner` command available globally on your system.
 
