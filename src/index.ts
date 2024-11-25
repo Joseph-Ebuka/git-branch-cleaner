@@ -170,9 +170,12 @@ async function listStaleRemoteBranches(autoDelete: boolean) {
     const remoteBranches = await git.branch(["-r"]);
     spinner.stop();
 
-    // Filter out branches that are merged into the main branch
+    // Filter out branches that are merged into the main branch and exclude main/master
     const staleRemoteBranches = Object.entries(remoteBranches.branches).filter(
-      ([name]) => name.includes("origin/") && !name.includes("origin/main")
+      ([name]) =>
+        name.includes("origin/") &&
+        !name.includes("origin/main") &&
+        !name.includes("origin/master")
     );
 
     if (staleRemoteBranches.length === 0) {
