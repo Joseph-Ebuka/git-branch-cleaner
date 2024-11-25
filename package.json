@@ -1,0 +1,33 @@
+{
+  "name": "git-branch-cleaner",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts"
+  },
+  "bin": {
+    "git-branch-cleaner": "./dist/index.js"
+  },
+  "keywords": [
+    "git",
+    "branches",
+    "cleaner",
+    "cli"
+  ],
+  "author": "Joseph Ebuka David",
+  "license": "MIT",
+  "description": "A command line tool to clean up your local git branches.",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-spinners": "^2.6.0",
+    "commander": "^12.1.0",
+    "inquirer": "^12.1.0",
+    "ora": "^5.4.1",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
