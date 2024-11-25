@@ -139,6 +139,14 @@ async function deleteRemoteBranches(branchNames: string[]) {
         console.log(chalk.yellow(`Skipping protected remote branch: ${name}`));
         continue;
       }
+
+      // Check if the branch exists on the remote
+      const remoteBranches = await git.branch(["-r"]);
+      if (!remoteBranches.all.includes(name)) {
+        console.log(chalk.yellow(`Remote branch does not exist: ${name}`));
+        continue;
+      }
+
       await git.push("origin", `:${name}`);
       console.log(chalk.red(`Deleted remote branch: ${name}`));
     }
