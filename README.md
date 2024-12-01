@@ -1,15 +1,15 @@
 # Git Branch Cleaner
 
-Git Branch Cleaner is a command-line interface (CLI) tool designed to help developers clean up stale git branches both locally and remotely. It provides options to list, delete, and automatically manage branches that are no longer needed.
+A command-line tool to help manage and clean up Git branches in your repository.
 
 ## Features
 
-- **List Stale Branches**: Identify branches that are no longer active or have been merged.
-- **List All Branches**: List all branches in the repository.
-- **Delete Stale Branches**: Remove branches that are no longer needed.
-- **Dry Run Mode**: Preview which branches would be deleted without actually removing them.
-- **Automatic Deletion**: Automatically delete branches without manual confirmation.
-- **Remote Branch Management**: Clean up stale branches on the remote repository.
+- List all branches with status indicators
+- Identify and list stale branches (branches with deleted remotes)
+- Clean up merged branches
+- Delete specific branches
+- Safe deletion with protected branches (main/master)
+- Verbose mode for detailed branch information
 
 ## Installation
 

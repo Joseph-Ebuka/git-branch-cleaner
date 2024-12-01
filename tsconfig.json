@@ -6,11 +6,9 @@
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*"],
-  "scripts": {
-    "build": "tsc",
-    "start": "ts-node src/index.ts"
-  }
+  "exclude": ["node_modules"]
 }
